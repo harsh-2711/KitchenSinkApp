@@ -15,4 +15,5 @@
     <string name="with_debounce">With debounce</string>
     <string name="with_fuzziness">With fuzziness as a number</string>
     <string name="with_auto_fuzziness">With auto fuzziness</string>
+    <string name="with_voice_search">With voice search</string>
 </resources>

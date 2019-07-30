@@ -21,6 +21,9 @@
                 <item
                     android:id="@+id/nav_custom_clear_icon"
                     android:title="@string/with_custom_clear_icon" />
+                <item
+                    android:id="@+id/nav_voice_search"
+                    android:title="@string/with_voice_search" />
             </group>
         </menu>
     </item>

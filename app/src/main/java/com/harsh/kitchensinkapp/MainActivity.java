@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.harsh.searchwidget.Fragments.VoicePermissionDialogFragment;
 import com.harsh.searchwidget.Model.ClientSuggestionsModel;
 import com.harsh.searchwidget.Model.SearchPropModel;
 import com.harsh.searchwidget.SearchBar;
@@ -104,15 +105,14 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        navigationView.setCheckedItem(id);
 
         if (id == R.id.nav_basic) {
 
-            navigationView.setCheckedItem(R.id.nav_basic);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -128,6 +128,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -143,7 +144,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_without_search) {
 
-            navigationView.setCheckedItem(R.id.nav_without_search);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -158,6 +158,7 @@ public class MainActivity extends AppCompatActivity
 
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(false);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -173,7 +174,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_with_clear) {
 
-            navigationView.setCheckedItem(R.id.nav_with_clear);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -190,6 +190,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -205,7 +206,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_custom_search_icon) {
 
-            navigationView.setCheckedItem(R.id.nav_custom_search_icon);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -221,6 +221,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.custom_search_icon);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -236,7 +237,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_custom_clear_icon) {
 
-            navigationView.setCheckedItem(R.id.nav_custom_clear_icon);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -252,6 +252,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(true);
             searchBar.setClearIcon(R.drawable.delete);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -267,7 +268,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_debounce) {
 
-            navigationView.setCheckedItem(R.id.nav_debounce);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -284,6 +284,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -299,7 +300,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_fuzziness) {
 
-            navigationView.setCheckedItem(R.id.nav_fuzziness);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -316,6 +316,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -331,7 +332,6 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_auto_fuzziness) {
 
-            navigationView.setCheckedItem(R.id.nav_auto_fuzziness);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -348,6 +348,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -358,6 +359,71 @@ public class MainActivity extends AppCompatActivity
                 @Override
                 public void onLongClick(View view, int position, ClientSuggestionsModel result) {
 
+                }
+            });
+
+        } else if (id == R.id.nav_voice_search) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(true);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
+            searchBar.setOnSearchActionListener(new SearchBar.OnSearchActionListener() {
+                @Override
+                public void onSearchStateChanged(boolean enabled) {
+
+                }
+
+                @Override
+                public void onSearchConfirmed(CharSequence text) {
+
+                }
+
+                @Override
+                public void onButtonClicked(int buttonCode) {
+                    if(buttonCode == SearchBar.BUTTON_SPEECH) {
+                        if(searchBar.isVoicePermissionGranted()) {
+                            searchBar.startVoiceSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                                @Override
+                                public void onClick(View view, int position, ClientSuggestionsModel result) {
+                                    // Handle item click events
+                                }
+
+                                @Override
+                                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+                                    // Handle long click events
+                                }
+                            });
+                        } else {
+                            getSupportFragmentManager().beginTransaction().add(new VoicePermissionDialogFragment(), "Recording Permission").commit();
+                        }
+                    }
                 }
             });
 
