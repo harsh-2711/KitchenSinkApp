@@ -216,6 +216,34 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
+        } else if (id == R.id.nav_custom_clear_icon) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .build();
+
+            searchBar.setSearchIconVisibility(false);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setClearIcon(R.drawable.delete);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
