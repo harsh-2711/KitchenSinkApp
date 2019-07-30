@@ -18,4 +18,5 @@
     <string name="with_voice_search">With voice search</string>
     <string name="without_highlight">Without highlight</string>
     <string name="round_search_bar">Round edged search bar</string>
+    <string name="search_result_icon">With search result icon</string>
 </resources>
