@@ -13,5 +13,5 @@
     <string name="with_custom_search_icon">With Custom Search Icon</string>
     <string name="with_custom_clear_icon">With Custom Clear Icon</string>
     <string name="with_debounce">With Debounce</string>
-    <string name="with_fuzziness">With Fuzziness</string>
+    <string name="with_fuzziness">With Fuzziness As Number</string>
 </resources>
