@@ -34,6 +34,9 @@
             <item
                 android:id="@+id/nav_fuzziness"
                 android:title="@string/with_fuzziness" />
+            <item
+                android:id="@+id/nav_auto_fuzziness"
+                android:title="@string/with_auto_fuzziness" />
         </menu>
     </item>
 

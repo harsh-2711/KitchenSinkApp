@@ -8,10 +8,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="basic">Basic</string>
-    <string name="without_search_icon">Without Search Icon</string>
-    <string name="with_clear_icon">With Clear Icon</string>
-    <string name="with_custom_search_icon">With Custom Search Icon</string>
-    <string name="with_custom_clear_icon">With Custom Clear Icon</string>
-    <string name="with_debounce">With Debounce</string>
-    <string name="with_fuzziness">With Fuzziness As Number</string>
+    <string name="without_search_icon">Without search icon</string>
+    <string name="with_clear_icon">With clear icon</string>
+    <string name="with_custom_search_icon">With custom search icon</string>
+    <string name="with_custom_clear_icon">With custom clear icon</string>
+    <string name="with_debounce">With debounce</string>
+    <string name="with_fuzziness">With fuzziness as a number</string>
+    <string name="with_auto_fuzziness">With auto fuzziness</string>
 </resources>
