@@ -28,15 +28,17 @@
 
     <item android:title="Search Props">
         <menu>
-            <item
-                android:id="@+id/nav_debounce"
-                android:title="@string/with_debounce" />
-            <item
-                android:id="@+id/nav_fuzziness"
-                android:title="@string/with_fuzziness" />
-            <item
-                android:id="@+id/nav_auto_fuzziness"
-                android:title="@string/with_auto_fuzziness" />
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_debounce"
+                    android:title="@string/with_debounce" />
+                <item
+                    android:id="@+id/nav_fuzziness"
+                    android:title="@string/with_fuzziness" />
+                <item
+                    android:id="@+id/nav_auto_fuzziness"
+                    android:title="@string/with_auto_fuzziness" />
+            </group>
         </menu>
     </item>
 

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity
 
     SearchBar searchBar;
     ArrayList<String> dataFields;
+    NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity
         dataFields.add("title.search");
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity
                 .setRedirectIcon(false)
                 .setSearchResultImage(false)
                 .setHitsEnabled(false)
+                .setDebounce(300)
+                .setFuzziness("AUTO")
                 .build();
 
         searchBar.setSearchIconVisibility(true);
@@ -109,6 +112,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_basic) {
 
+            navigationView.setCheckedItem(R.id.nav_basic);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -139,6 +143,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_without_search) {
 
+            navigationView.setCheckedItem(R.id.nav_without_search);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -168,6 +173,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_with_clear) {
 
+            navigationView.setCheckedItem(R.id.nav_with_clear);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -199,6 +205,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_custom_search_icon) {
 
+            navigationView.setCheckedItem(R.id.nav_custom_search_icon);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -229,6 +236,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_custom_clear_icon) {
 
+            navigationView.setCheckedItem(R.id.nav_custom_clear_icon);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -259,6 +267,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_debounce) {
 
+            navigationView.setCheckedItem(R.id.nav_debounce);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -290,6 +299,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_fuzziness) {
 
+            navigationView.setCheckedItem(R.id.nav_fuzziness);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
@@ -321,6 +331,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_auto_fuzziness) {
 
+            navigationView.setCheckedItem(R.id.nav_auto_fuzziness);
             searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
