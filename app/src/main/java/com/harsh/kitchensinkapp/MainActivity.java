@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_basic) {
+
+            searchBar.disableSearch();
+
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setHighlight(true)
@@ -133,6 +136,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_without_search) {
 
+            searchBar.disableSearch();
+
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setHighlight(true)
@@ -157,6 +162,8 @@ public class MainActivity extends AppCompatActivity
             });
 
         } else if (id == R.id.nav_with_clear) {
+
+            searchBar.disableSearch();
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
