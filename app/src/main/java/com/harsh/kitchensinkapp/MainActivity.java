@@ -14,12 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
+import com.harsh.searchwidget.Model.ClientSuggestionsModel;
+import com.harsh.searchwidget.Model.SearchPropModel;
 import com.harsh.searchwidget.SearchBar;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     SearchBar searchBar;
+    ArrayList<String> dataFields;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,11 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         searchBar = (SearchBar) findViewById(R.id.searchBar);
+        searchBar.setAppbaseClient("https://scalr.api.appbase.io", "shopify-flipkart-test", "xJC6pHyMz", "54fabdda-4f7d-43c9-9960-66ff45d8d4cf", "products");
+
+        dataFields = new ArrayList<>();
+        dataFields.add("title");
+        dataFields.add("title.search");
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -37,6 +47,27 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        navigationView.setCheckedItem(R.id.nav_basic);
+        final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                .setQueryFormat("or")
+                .setHighlight(true)
+                .setRedirectIcon(false)
+                .setSearchResultImage(false)
+                .setHitsEnabled(false)
+                .build();
+
+        searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+            @Override
+            public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+            }
+
+            @Override
+            public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+            }
+        });
     }
 
     @Override
@@ -74,6 +105,25 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_basic) {
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .build();
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
 
         } else if (id == R.id.nav_gallery) {
 
