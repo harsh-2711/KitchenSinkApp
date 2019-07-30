@@ -117,10 +117,12 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
+                    .setDebounce(300)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -144,6 +146,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
+                    .setDebounce(300)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -171,10 +174,13 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
+                    .setDebounce(300)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -198,6 +204,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
+                    .setDebounce(300)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -226,6 +233,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
+                    .setDebounce(300)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -245,6 +253,34 @@ public class MainActivity extends AppCompatActivity
             });
 
         } else if (id == R.id.nav_debounce) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
 
         } else if (id == R.id.nav_fuzziness) {
 
