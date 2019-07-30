@@ -14,8 +14,8 @@
             android:id="@+id/nav_with_clear"
             android:title="@string/with_clear_icon" />
         <item
-            android:id="@+id/nav_tools"
-            android:title="@string/menu_tools" />
+            android:id="@+id/nav_custom_search_icon"
+            android:title="@string/with_custom_search_icon" />
     </group>
 
     <item android:title="Communicate">
