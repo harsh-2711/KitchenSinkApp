@@ -8,8 +8,8 @@
             android:id="@+id/nav_basic"
             android:title="@string/basic" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_without_search"
+            android:title="@string/without_search_icon" />
         <item
             android:id="@+id/nav_slideshow"
             android:title="@string/menu_slideshow" />

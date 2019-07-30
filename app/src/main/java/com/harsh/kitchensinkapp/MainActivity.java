@@ -113,6 +113,8 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .build();
 
+            searchBar.setSearchIconVisibility(true);
+
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
                 public void onClick(View view, int position, ClientSuggestionsModel result) {
@@ -125,7 +127,29 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_without_search) {
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .build();
+
+            searchBar.setSearchIconVisibility(false);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
 
         } else if (id == R.id.nav_slideshow) {
 
