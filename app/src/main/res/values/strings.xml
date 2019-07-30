@@ -9,7 +9,7 @@
 
     <string name="basic">Basic</string>
     <string name="without_search_icon">Without Search Icon</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="with_clear_icon">With Clear Icon</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>

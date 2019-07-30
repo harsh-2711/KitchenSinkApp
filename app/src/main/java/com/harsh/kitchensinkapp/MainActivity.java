@@ -57,6 +57,9 @@ public class MainActivity extends AppCompatActivity
                 .setHitsEnabled(false)
                 .build();
 
+        searchBar.setSearchIconVisibility(true);
+        searchBar.setClearIconVisibility(false);
+
         searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
             @Override
             public void onClick(View view, int position, ClientSuggestionsModel result) {
@@ -114,6 +117,7 @@ public class MainActivity extends AppCompatActivity
                     .build();
 
             searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -138,6 +142,7 @@ public class MainActivity extends AppCompatActivity
                     .build();
 
             searchBar.setSearchIconVisibility(false);
+            searchBar.setClearIconVisibility(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -151,7 +156,30 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_with_clear) {
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
 
         } else if (id == R.id.nav_tools) {
 
