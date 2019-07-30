@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -161,6 +162,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(false);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -194,6 +196,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -226,6 +229,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.custom_search_icon);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -258,6 +262,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIconVisibility(true);
             searchBar.setClearIcon(R.drawable.delete);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -291,6 +296,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -324,6 +330,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -357,6 +364,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -390,6 +398,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(true);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -456,6 +465,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -469,6 +479,40 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
+        } else if (id == R.id.nav_round_search) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .setHighlight(true)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(true);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+            
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
