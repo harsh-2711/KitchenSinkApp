@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -159,6 +160,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -192,6 +194,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -227,6 +230,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -261,6 +265,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -295,6 +300,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -330,6 +336,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("1")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -365,6 +372,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -400,6 +408,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -468,6 +477,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(false)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -503,6 +513,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(false)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -538,6 +549,7 @@ public class MainActivity extends AppCompatActivity
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setSearchResultImage(true)
+                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -545,7 +557,43 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
-            searchBar.setRoundedSearchBarEnabled(true);
+            searchBar.setRoundedSearchBarEnabled(false);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
+        } else if (id == R.id.nav_redirect_icon) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .setHighlight(true)
+                    .setSearchResultImage(true)
+                    .setRedirectIcon(true)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override

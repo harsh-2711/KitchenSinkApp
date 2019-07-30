@@ -19,4 +19,5 @@
     <string name="without_highlight">Without highlight</string>
     <string name="round_search_bar">Round edged search bar</string>
     <string name="search_result_icon">With search result icon</string>
+    <string name="redirect_icon">With redirect icon</string>
 </resources>
