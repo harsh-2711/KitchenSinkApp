@@ -16,4 +16,5 @@
     <string name="with_fuzziness">With fuzziness as a number</string>
     <string name="with_auto_fuzziness">With auto fuzziness</string>
     <string name="with_voice_search">With voice search</string>
+    <string name="without_highlight">Without highlight</string>
 </resources>

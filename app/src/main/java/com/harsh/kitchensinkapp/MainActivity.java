@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -154,6 +155,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -184,6 +186,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -216,6 +219,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -247,6 +251,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -278,6 +283,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -310,6 +316,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("1")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -342,6 +349,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -374,6 +382,7 @@ public class MainActivity extends AppCompatActivity
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
+                    .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -424,6 +433,39 @@ public class MainActivity extends AppCompatActivity
                             getSupportFragmentManager().beginTransaction().add(new VoicePermissionDialogFragment(), "Recording Permission").commit();
                         }
                     }
+                }
+            });
+
+        } else if (id == R.id.nav_without_highlight) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .setHighlight(false)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
                 }
             });
 
