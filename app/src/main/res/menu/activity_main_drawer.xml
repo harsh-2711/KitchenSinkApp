@@ -3,32 +3,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_basic"
-            android:title="@string/basic" />
-        <item
-            android:id="@+id/nav_without_search"
-            android:title="@string/without_search_icon" />
-        <item
-            android:id="@+id/nav_with_clear"
-            android:title="@string/with_clear_icon" />
-        <item
-            android:id="@+id/nav_custom_search_icon"
-            android:title="@string/with_custom_search_icon" />
-        <item
-            android:id="@+id/nav_custom_clear_icon"
-            android:title="@string/with_custom_clear_icon" />
-    </group>
+    <item android:title="External Attributes" >
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_basic"
+                    android:title="@string/basic" />
+                <item
+                    android:id="@+id/nav_without_search"
+                    android:title="@string/without_search_icon" />
+                <item
+                    android:id="@+id/nav_with_clear"
+                    android:title="@string/with_clear_icon" />
+                <item
+                    android:id="@+id/nav_custom_search_icon"
+                    android:title="@string/with_custom_search_icon" />
+                <item
+                    android:id="@+id/nav_custom_clear_icon"
+                    android:title="@string/with_custom_clear_icon" />
+            </group>
+        </menu>
+    </item>
 
-    <item android:title="Communicate">
+
+    <item android:title="Search Props">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:title="@string/menu_share" />
+                android:id="@+id/nav_debounce"
+                android:title="@string/with_debounce" />
             <item
-                android:id="@+id/nav_send"
-                android:title="@string/menu_send" />
+                android:id="@+id/nav_fuzziness"
+                android:title="@string/with_fuzziness" />
         </menu>
     </item>
 

@@ -244,9 +244,9 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_debounce) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_fuzziness) {
 
         }
 

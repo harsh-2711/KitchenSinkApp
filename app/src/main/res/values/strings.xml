@@ -12,6 +12,6 @@
     <string name="with_clear_icon">With Clear Icon</string>
     <string name="with_custom_search_icon">With Custom Search Icon</string>
     <string name="with_custom_clear_icon">With Custom Clear Icon</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="with_debounce">With Debounce</string>
+    <string name="with_fuzziness">With Fuzziness</string>
 </resources>
