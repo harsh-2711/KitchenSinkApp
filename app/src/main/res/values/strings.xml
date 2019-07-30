@@ -20,4 +20,5 @@
     <string name="round_search_bar">Round edged search bar</string>
     <string name="search_result_icon">With search result icon</string>
     <string name="redirect_icon">With redirect icon</string>
+    <string name="with_categories">With categories</string>
 </resources>
