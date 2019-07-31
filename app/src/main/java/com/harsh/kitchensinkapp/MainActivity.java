@@ -755,6 +755,49 @@ public class MainActivity extends AppCompatActivity
                 }
             });
 
+        } else if (id == R.id.nav_default_weights) {
+
+            searchBar.disableSearch();
+
+            ArrayList<Integer> weights;
+
+            // Setting weights for dataFields
+            weights = new ArrayList<>();
+            weights.add(1);
+            weights.add(3);
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(true)
+                    .setSearchResultImage(true)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .setHighlight(true)
+                    .setWeights(weights)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
