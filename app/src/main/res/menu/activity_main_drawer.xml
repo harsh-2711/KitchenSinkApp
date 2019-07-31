@@ -27,6 +27,9 @@
                 <item
                     android:id="@+id/nav_round_search"
                     android:title="@string/round_search_bar" />
+                <item
+                    android:id="@+id/nav_max_suggestions_count"
+                    android:title="@string/max_suggestions_count" />
             </group>
         </menu>
     </item>

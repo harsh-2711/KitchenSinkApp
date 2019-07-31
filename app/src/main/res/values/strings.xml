@@ -21,4 +21,5 @@
     <string name="search_result_icon">With search result icon</string>
     <string name="redirect_icon">With redirect icon</string>
     <string name="with_categories">With categories</string>
+    <string name="max_suggestions_count">Max suggestions count</string>
 </resources>

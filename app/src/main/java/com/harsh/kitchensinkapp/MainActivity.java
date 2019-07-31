@@ -124,8 +124,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -133,6 +131,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -159,14 +158,13 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(false);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -193,8 +191,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -203,6 +199,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -229,8 +226,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -238,6 +233,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSearchIcon(R.drawable.custom_search_icon);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -264,8 +260,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(false);
@@ -273,6 +267,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.delete);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -299,8 +294,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -309,6 +302,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -335,8 +329,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("1")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -345,6 +337,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -371,8 +364,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -381,6 +372,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -407,8 +399,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -417,6 +407,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(true);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -476,8 +467,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(false)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -486,6 +475,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -512,8 +502,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(false)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -522,6 +510,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(true);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -543,13 +532,11 @@ public class MainActivity extends AppCompatActivity
                     .setQueryFormat("or")
                     .setHighlight(true)
                     .setRedirectIcon(false)
-                    .setSearchResultImage(false)
+                    .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(true)
-                    .setRedirectIcon(false)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -558,6 +545,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -578,14 +566,12 @@ public class MainActivity extends AppCompatActivity
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setHighlight(true)
-                    .setRedirectIcon(false)
-                    .setSearchResultImage(false)
+                    .setRedirectIcon(true)
+                    .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(true)
-                    .setRedirectIcon(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -594,6 +580,7 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -614,14 +601,12 @@ public class MainActivity extends AppCompatActivity
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setHighlight(true)
-                    .setRedirectIcon(false)
-                    .setSearchResultImage(false)
+                    .setRedirectIcon(true)
+                    .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(300)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
-                    .setSearchResultImage(true)
-                    .setRedirectIcon(true)
                     .setCategoryField("tags")
                     .build();
 
@@ -631,6 +616,42 @@ public class MainActivity extends AppCompatActivity
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(3);
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
+        } else if (id == R.id.nav_max_suggestions_count) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setHighlight(true)
+                    .setRedirectIcon(false)
+                    .setSearchResultImage(false)
+                    .setHitsEnabled(false)
+                    .setDebounce(300)
+                    .setFuzziness("AUTO")
+                    .setHighlight(true)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(6);
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
