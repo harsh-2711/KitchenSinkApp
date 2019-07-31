@@ -23,4 +23,5 @@
     <string name="with_categories">With categories</string>
     <string name="max_suggestions_count">Max suggestions count</string>
     <string name="top_categories">Top categories count</string>
+    <string name="default_suggestions">With default suggestions</string>
 </resources>
