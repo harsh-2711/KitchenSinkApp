@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -258,7 +258,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(200)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -327,7 +327,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("1")
                     .setHighlight(true)
                     .build();
@@ -362,7 +362,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -397,13 +397,13 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
-            searchBar.setClearIconVisibility(true);
+            searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
             searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
             searchBar.setSpeechMode(true);
@@ -465,7 +465,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(false)
                     .build();
@@ -500,7 +500,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -535,7 +535,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -570,7 +570,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -605,7 +605,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setCategoryField("tags")
@@ -641,7 +641,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -676,7 +676,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setCategoryField("tags")
@@ -727,7 +727,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setCategoryField("tags")
@@ -772,7 +772,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(300)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .setWeights(weights)
