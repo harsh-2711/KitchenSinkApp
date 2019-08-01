@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity
                 .setSearchResultImage(false)
                 .setHitsEnabled(false)
                 .setHighlight(true)
-                .setDebounce(0)
-                .setFuzziness("0")
+                .setDebounce(100)
+                .setFuzziness("5")
                 .build();
 
         searchBar.setSearchIconVisibility(true);
@@ -127,8 +127,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -194,8 +194,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -229,8 +229,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -263,8 +263,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -297,8 +297,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(200)
-                    .setFuzziness("0")
+                    .setDebounce(300)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -332,8 +332,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("2")
+                    .setDebounce(100)
+                    .setFuzziness("15")
                     .setHighlight(true)
                     .build();
 
@@ -367,7 +367,7 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
+                    .setDebounce(100)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
@@ -402,8 +402,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -470,8 +470,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(false)
                     .build();
 
@@ -505,8 +505,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -540,8 +540,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -575,8 +575,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -610,8 +610,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .setCategoryField("tags")
                     .setTopEntries(5)
@@ -647,8 +647,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
@@ -682,8 +682,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .setCategoryField("tags")
                     .setTopEntries(2)
@@ -733,8 +733,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .setCategoryField("tags")
                     .setTopEntries(2)
@@ -778,8 +778,8 @@ public class MainActivity extends AppCompatActivity
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(0)
-                    .setFuzziness("0")
+                    .setDebounce(100)
+                    .setFuzziness("5")
                     .setHighlight(true)
                     .setWeights(weights)
                     .build();
