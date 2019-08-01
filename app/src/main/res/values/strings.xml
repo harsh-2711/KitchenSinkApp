@@ -19,10 +19,10 @@
     <string name="without_highlight">Without highlight</string>
     <string name="round_search_bar">Round edged search bar</string>
     <string name="search_result_icon">With search result icon</string>
-    <string name="redirect_icon">With redirect icon</string>
+    <string name="redirect_icon">With insert suggestions icon</string>
     <string name="with_categories">With categories</string>
     <string name="max_suggestions_count">Max suggestions count</string>
-    <string name="top_categories">Top categories count</string>
+    <string name="top_categories">With custom categories</string>
     <string name="default_suggestions">With default suggestions</string>
     <string name="default_weights">With default weights</string>
 </resources>
