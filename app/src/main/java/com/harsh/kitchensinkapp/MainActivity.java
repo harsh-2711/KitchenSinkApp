@@ -770,7 +770,7 @@ public class MainActivity extends AppCompatActivity
             // Setting weights for dataFields
             weights = new ArrayList<>();
             weights.add(1);
-            weights.add(3);
+            weights.add(1);
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
