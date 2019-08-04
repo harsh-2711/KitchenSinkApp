@@ -1,5 +1,6 @@
 package com.harsh.kitchensinkapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -77,6 +78,8 @@ public class MainActivity extends AppCompatActivity
         searchBar.setSpeechMode(false);
         searchBar.setRoundedSearchBarEnabled(false);
         searchBar.setMaxSuggestionCount(5);
+        searchBar.setTextColor(Color.parseColor("#000000"));
+        searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
         searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
             @Override
@@ -147,6 +150,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -181,6 +186,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -217,6 +224,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -252,6 +261,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -287,6 +298,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -323,6 +336,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -359,6 +374,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -395,6 +412,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -431,6 +450,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(true);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -500,6 +521,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -536,6 +559,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(true);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -572,6 +597,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -608,6 +635,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -647,6 +676,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -683,6 +714,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(8);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -722,6 +755,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -776,6 +811,8 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override
@@ -820,6 +857,84 @@ public class MainActivity extends AppCompatActivity
             searchBar.setSpeechMode(false);
             searchBar.setRoundedSearchBarEnabled(false);
             searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
+        } else if (id == R.id.nav_custom_text_color) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setWeights(weights)
+                    .setHighlight(true)
+                    .setRedirectIcon(true)
+                    .setSearchResultImage(true)
+                    .setHitsEnabled(false)
+                    .setDebounce(100)
+                    .setFuzziness("5")
+                    .setHighlight(true)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#D81B60"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
+
+            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
+                @Override
+                public void onClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+
+                @Override
+                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
+
+                }
+            });
+
+        } else if (id == R.id.nav_custom_placeholder_color) {
+
+            searchBar.disableSearch();
+
+            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+                    .setQueryFormat("or")
+                    .setWeights(weights)
+                    .setHighlight(true)
+                    .setRedirectIcon(true)
+                    .setSearchResultImage(true)
+                    .setHitsEnabled(false)
+                    .setDebounce(100)
+                    .setFuzziness("5")
+                    .setHighlight(true)
+                    .build();
+
+            searchBar.setSearchIconVisibility(true);
+            searchBar.setClearIconVisibility(true);
+            searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
+            searchBar.setClearIcon(R.drawable.ic_close_black_48dp);
+            searchBar.setSpeechMode(false);
+            searchBar.setRoundedSearchBarEnabled(false);
+            searchBar.setMaxSuggestionCount(5);
+            searchBar.setTextColor(Color.parseColor("#000000"));
+            searchBar.setPlaceHolderColor(Color.parseColor("#D81B60"));
 
             searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
                 @Override

@@ -25,4 +25,6 @@
     <string name="top_categories">With custom categories</string>
     <string name="default_suggestions">With default suggestions</string>
     <string name="default_weights">With field weights</string>
+    <string name="with_custom_text_color">With custom text color</string>
+    <string name="with_custom_placeholder_color">With custom placeholder color</string>
 </resources>
