@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity
 
     SearchBar searchBar;
     ArrayList<String> dataFields;
+    ArrayList<Integer> weights;
     NavigationView navigationView;
 
     @Override
@@ -41,7 +42,13 @@ public class MainActivity extends AppCompatActivity
 
         dataFields = new ArrayList<>();
         dataFields.add("title");
+        dataFields.add("title.keyword");
         dataFields.add("title.search");
+
+        weights = new ArrayList<>();
+        weights.add(3);
+        weights.add(3);
+        weights.add(1);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -54,6 +61,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.nav_basic);
         final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                 .setQueryFormat("or")
+                .setWeights(weights)
                 .setHighlight(true)
                 .setRedirectIcon(false)
                 .setSearchResultImage(false)
@@ -123,6 +131,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -157,6 +166,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -190,6 +200,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -225,6 +236,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -259,6 +271,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -293,6 +306,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -328,6 +342,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -363,6 +378,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -398,6 +414,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -466,6 +483,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -501,6 +519,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -536,6 +555,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(true)
@@ -571,6 +591,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
@@ -606,15 +627,17 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(100)
-                    .setFuzziness("5")
+                    .setFuzziness("0")
                     .setHighlight(true)
-                    .setCategoryField("tags")
-                    .setTopEntries(5)
+                    .setCategoryField("tags.keyword")
+                    .setInPlaceCategory(false)
+                    .setTopEntries(2)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -643,6 +666,7 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
@@ -678,15 +702,17 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(100)
-                    .setFuzziness("5")
+                    .setFuzziness("0")
                     .setHighlight(true)
-                    .setCategoryField("tags")
-                    .setTopEntries(2)
+                    .setCategoryField("tags.keyword")
+                    .setInPlaceCategory(false)
+                    .setTopEntries(4)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
@@ -729,14 +755,16 @@ public class MainActivity extends AppCompatActivity
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
                     .setDebounce(100)
-                    .setFuzziness("5")
+                    .setFuzziness("0")
                     .setHighlight(true)
-                    .setCategoryField("tags")
+                    .setCategoryField("tags.keyword")
+                    .setInPlaceCategory(false)
                     .setTopEntries(2)
                     .setDefaultSuggestions(defaultSuggestions)
                     .build();
@@ -765,15 +793,17 @@ public class MainActivity extends AppCompatActivity
 
             searchBar.disableSearch();
 
-            ArrayList<Integer> weights;
+            ArrayList<Integer> customWeights;
 
             // Setting weights for dataFields
-            weights = new ArrayList<>();
-            weights.add(1);
-            weights.add(1);
+            customWeights = new ArrayList<>();
+            customWeights.add(1);
+            customWeights.add(1);
+            customWeights.add(1);
 
             final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
+                    .setWeights(customWeights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
@@ -781,7 +811,6 @@ public class MainActivity extends AppCompatActivity
                     .setDebounce(100)
                     .setFuzziness("5")
                     .setHighlight(true)
-                    .setWeights(weights)
                     .build();
 
             searchBar.setSearchIconVisibility(true);
