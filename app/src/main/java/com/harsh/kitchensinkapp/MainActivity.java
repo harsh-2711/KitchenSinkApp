@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity
     ArrayList<String> dataFields;
     ArrayList<Integer> weights;
     NavigationView navigationView;
+    SearchPropModel searchPropModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity
                 .setSearchResultImage(false)
                 .setHitsEnabled(false)
                 .setHighlight(true)
-                .setDebounce(100)
+                .setDebounce(0)
                 .setFuzziness("5")
                 .build();
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity
         searchBar.setMaxSuggestionCount(5);
         searchBar.setTextColor(Color.parseColor("#000000"));
         searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
+        searchBar.setLoggingQuery(true);
 
         searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
             @Override
@@ -132,18 +134,19 @@ public class MainActivity extends AppCompatActivity
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -153,34 +156,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_without_search) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(false);
             searchBar.setSpeechMode(false);
@@ -189,34 +181,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_with_clear) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -227,34 +208,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_custom_search_icon) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.custom_search_icon);
@@ -264,34 +234,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_custom_clear_icon) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(false);
             searchBar.setClearIconVisibility(true);
             searchBar.setClearIcon(R.drawable.delete);
@@ -301,23 +260,11 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_debounce) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
@@ -329,6 +276,7 @@ public class MainActivity extends AppCompatActivity
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -338,35 +286,24 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         } else if (id == R.id.nav_fuzziness) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("15")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -376,35 +313,24 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         } else if (id == R.id.nav_auto_fuzziness) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("AUTO")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -415,34 +341,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_voice_search) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(false);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -452,18 +367,6 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
             searchBar.setOnSearchActionListener(new SearchBar.OnSearchActionListener() {
                 @Override
@@ -502,18 +405,19 @@ public class MainActivity extends AppCompatActivity
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(false)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -524,34 +428,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_round_search) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -562,34 +455,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_search_result_icon) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -599,35 +481,24 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         } else if (id == R.id.nav_redirect_icon) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -638,30 +509,18 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_categories) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("0")
                     .setHighlight(true)
                     .setCategoryField("tags.keyword")
@@ -669,6 +528,7 @@ public class MainActivity extends AppCompatActivity
                     .setTopEntries(2)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -679,34 +539,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_max_suggestions_count) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(false)
                     .setSearchResultImage(false)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -717,30 +566,18 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_top_categories) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("0")
                     .setHighlight(true)
                     .setCategoryField("tags.keyword")
@@ -748,6 +585,7 @@ public class MainActivity extends AppCompatActivity
                     .setTopEntries(4)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -757,18 +595,6 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         } else if (id == R.id.nav_max_default_suggestions) {
 
@@ -788,14 +614,14 @@ public class MainActivity extends AppCompatActivity
             // Setting default suggestions
             ArrayList<ClientSuggestionsModel> defaultSuggestions = new DefaultClientSuggestions(suggestions).setCategories(categories).build();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("0")
                     .setHighlight(true)
                     .setCategoryField("tags.keyword")
@@ -804,6 +630,7 @@ public class MainActivity extends AppCompatActivity
                     .setDefaultSuggestions(defaultSuggestions)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -813,18 +640,6 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         } else if (id == R.id.nav_default_weights) {
 
@@ -838,18 +653,19 @@ public class MainActivity extends AppCompatActivity
             customWeights.add(1);
             customWeights.add(1);
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(customWeights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -860,34 +676,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_custom_text_color) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -898,34 +703,23 @@ public class MainActivity extends AppCompatActivity
             searchBar.setTextColor(Color.parseColor("#D81B60"));
             searchBar.setPlaceHolderColor(Color.parseColor("#808080"));
 
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
-
         } else if (id == R.id.nav_custom_placeholder_color) {
 
             searchBar.disableSearch();
 
-            final SearchPropModel searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
+            searchPropModel = searchBar.setSearchProp("Demo Widget", dataFields)
                     .setQueryFormat("or")
                     .setWeights(weights)
                     .setHighlight(true)
                     .setRedirectIcon(true)
                     .setSearchResultImage(true)
                     .setHitsEnabled(false)
-                    .setDebounce(100)
+                    .setDebounce(0)
                     .setFuzziness("5")
                     .setHighlight(true)
                     .build();
 
+            searchBar.setSearchPropModel(searchPropModel);
             searchBar.setSearchIconVisibility(true);
             searchBar.setClearIconVisibility(true);
             searchBar.setSearchIcon(R.drawable.ic_magnify_black_48dp);
@@ -935,18 +729,6 @@ public class MainActivity extends AppCompatActivity
             searchBar.setMaxSuggestionCount(5);
             searchBar.setTextColor(Color.parseColor("#000000"));
             searchBar.setPlaceHolderColor(Color.parseColor("#D81B60"));
-
-            searchBar.startSearch(searchPropModel, new SearchBar.ItemClickListener() {
-                @Override
-                public void onClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-
-                @Override
-                public void onLongClick(View view, int position, ClientSuggestionsModel result) {
-
-                }
-            });
 
         }
 
